@@ -1,5 +1,5 @@
 <template>
-  <nav class="container pt-3">
+  <nav class="container header pt-3">
     <div class="row align-items-center">
       <div class="col-3">
         <img src="../assets/images/logo.png" alt="Logo" />
@@ -41,6 +41,11 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  position: relative;
+  z-index: 1;
+}
+
 .list {
   list-style: none;
   display: flex;
