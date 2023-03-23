@@ -10,12 +10,14 @@
         </p>
         <div class="row mt-4">
           <div class="col-5 mr-2">
-            <button class="button button--state-primary button--state-shadow">
-              Daftar Sekarang
-            </button>
+            <BaseButton
+              name="Daftar Sekarang"
+              :isPrimary="true"
+              :hasShadow="true"
+            />
           </div>
           <div class="col-5 ml-n5">
-            <button class="button">About Us</button>
+            <BaseButton name="About Us" :isPrimary="false" :hasShadow="false" />
           </div>
         </div>
       </div>
@@ -46,10 +48,11 @@
 
 <script>
 import BaseStarIcon from "../components/BaseStarIcon.vue";
+import BaseButton from "../components/BaseButton.vue";
 
 export default {
   name: "TheHero",
-  components: { BaseStarIcon },
+  components: { BaseStarIcon, BaseButton },
 };
 </script>
 
@@ -85,26 +88,6 @@ export default {
   font-size: 18px;
   line-height: 29px;
   color: #757575;
-}
-
-.button {
-  background: #f2f2f2;
-  color: #333333;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 10px 18px;
-  height: 42px;
-  border-radius: 100px;
-  border: none;
-}
-
-.button--state-primary {
-  background: #8bac3e;
-  color: #ffffff;
-}
-
-.button--state-shadow {
-  box-shadow: 0px 8px 32px rgba(102, 107, 226, 0.35);
 }
 
 .hero-image {

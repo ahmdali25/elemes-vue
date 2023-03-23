@@ -2,10 +2,7 @@
   <section class="container category-section">
     <div class="row">
       <div class="col">
-        <h1 class="category-title">
-          Browse Our Category <br />
-          <span>Receipt</span>
-        </h1>
+        <BaseSectionTitle title="Category" />
       </div>
     </div>
     <div class="food-wrapper">
@@ -54,8 +51,11 @@
 </template>
 
 <script>
+import BaseSectionTitle from "../components/BaseSectionTitle.vue";
+
 export default {
   name: "TheCategory",
+  components: { BaseSectionTitle },
   data: () => ({
     foods: [
       { id: 1, name: "cupcake", total: 22, color: "#F0FEEB" },
@@ -70,18 +70,7 @@ export default {
 
 <style scoped>
 .category-section {
-  padding: 100px 0;
-}
-
-.category-title {
-  font-family: "Rubik";
-  font-weight: 500;
-  font-size: 38px;
-  color: #333333;
-}
-
-.category-title span {
-  color: #8bac3e;
+  padding: 100px 0 0 0;
 }
 
 .food-wrapper {

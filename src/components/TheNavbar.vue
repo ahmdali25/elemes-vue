@@ -19,15 +19,13 @@
         </ul>
       </div>
       <div class="col-4">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-2">
-            <span class="nav">Masuk</span>
-          </div>
-          <div class="col-2">
-            <button class="button button--state-primary">
-              Daftar Sekarang
-            </button>
-          </div>
+        <div class="nav-wrapper">
+          <span class="nav">Masuk</span>
+          <BaseButton
+            name="Daftar Sekarang"
+            :isPrimary="true"
+            :hasShadow="false"
+          />
         </div>
       </div>
     </div>
@@ -35,8 +33,11 @@
 </template>
 
 <script>
+import BaseButton from "../components/BaseButton.vue";
+
 export default {
   name: "BaseNavbar",
+  components: { BaseButton },
 };
 </script>
 
@@ -78,26 +79,17 @@ export default {
   color: #ffffff;
 }
 
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
 .nav {
   font-weight: 500;
   font-size: 14px;
   color: #333333;
-}
-
-.button {
-  background: #f2f2f2;
-  color: #333333;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 10px 18px;
-  width: 147px;
-  height: 42px;
-  border-radius: 100px;
-  border: none;
-}
-
-.button--state-primary {
-  background: #8bac3e;
-  color: #ffffff;
 }
 </style>
